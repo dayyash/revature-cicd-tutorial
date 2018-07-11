@@ -6,5 +6,10 @@ pipeline {
         echo 'Hello!'
       }
     }
+    stage('Maven Build') {
+      steps {
+        sh 'mvn clean package -DskipTests'
+      }
+    }
   }
 }
